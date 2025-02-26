@@ -4,14 +4,20 @@ def has_duplicate_dictionary(lst):
     # sering item tersebut muncul di list
     frequency = {}
     for item in lst:
-        pass
+        if item in frequency:
+            return True
+        frequency[item] = 1
+    return False
 
 
 def has_duplicate_set(lst):
     # set ini berisi item yang sudah pernah dilihat dalam lst
     seen = set()
     for item in lst:
-        pass
+        if item in seen:
+            return True
+        seen.add(item)
+    return False
 
 
 def main():

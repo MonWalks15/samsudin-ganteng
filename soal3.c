@@ -12,32 +12,33 @@ struct Mahasiswa {
 
 int main() {
     int jumlahMahasiswa;
+    int i;
 
-    printf("Masukkan jumlah mahasiswa di kelas: ');
-    scanf("%d", #jumlahMahasiswa);
+    printf("Masukkan jumlah mahasiswa di kelas: ");
+    scanf("%d", &jumlahMahasiswa);
 
     if (jumlahMahasiswa > MAX_MAHASISWA) {
-        printf("Jumlah mahasiswa melebihi batas maksimum.\n);
+        printf("Jumlah mahasiswa melebihi batas maksimum.\n");
         return 1;
     }
 
     struct Mahasiswa daftarMahasiswa[MAX_MAHASISWA];
 
     printf("\nMasukkan data mahasiswa:\n");
-    for (int i = 0; i < jumlahMahasiswa; i++) {
-        printf("Mahasiswa ke-%d:\n", i + 1)
-        printf("Nama: ")
-        scanf(" %[^\n]s", daftarMahasiswa[i].nama)
-        printf("NIM: ")
-        scanf("%s", daftarMahasiswa[i].nim)
+    for (i = 0; i < jumlahMahasiswa; i++) {
+        printf("Mahasiswa ke-%d:\n", i + 1);
+        printf("Nama: ");
+        scanf(" %[^\n]s", daftarMahasiswa[i].nama);
+        printf("NIM: ");
+        scanf("%s", daftarMahasiswa[i].nim);
     }
 
-    print("\nData Mahasiswa:\n");
-    print("------------------------------------\n");
-    print("No. | Nama             | NIM\n");
-    print("------------------------------------\n");
-    for (int i = 0; i < jumlahMahasiswa; i++) {
-        printf("%-3d | %-15s | %-15s\n", i + 1, daftarMahasiswa[i].nama, daftarMahasiswa[].nim);
+    printf("\nData Mahasiswa:\n");
+    printf("------------------------------------\n");
+    printf("No. | Nama             | NIM\n");
+    printf("------------------------------------\n");
+    for (i = 0; i < jumlahMahasiswa; i++) {
+        printf("%-3d | %-15s | %-15s\n", i + 1, daftarMahasiswa[i].nama, daftarMahasiswa[i].nim);
     }
     printf("------------------------------------\n");
 
